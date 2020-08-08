@@ -28,3 +28,9 @@ for arrayLength in array:
     print(array)
     #print(array[a])
    # print(array)
+
+# string has more methods, like evaluating and doing other stuff around
+country = 'india'
+
+# type casting needs to be done when concatenation
+print('length of the country : ' + str(country.__len__()))
