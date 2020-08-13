@@ -13,3 +13,4 @@ else:
 
 print('type of input' + str(type(a)))
 print('The entered value is ' + str(a))
+

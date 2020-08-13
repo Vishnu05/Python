@@ -73,3 +73,11 @@ for ii in companies:
 
 
 print(vars)
+
+# while loops printing 5 times 
+
+n = 5
+
+while (n > 0):
+    print ('hello world python while loop ' + str(n))
+    n = n - 1
