@@ -81,3 +81,13 @@ n = 5
 while (n > 0):
     print ('hello world python while loop ' + str(n))
     n = n - 1
+
+
+# range in loops and nested for loop
+# i is where the iterater and range is how many time this loop needs to be executed 
+
+for i in range(5):
+    print('For loop : ' + str(i))
+    
+    for i in range(5):
+        print('Nested for loop ' + str(i))
