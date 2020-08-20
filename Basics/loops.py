@@ -74,20 +74,38 @@ for ii in companies:
 
 print(vars)
 
-# while loops printing 5 times 
+# while loops printing 5 times
 
 n = 5
 
 while (n > 0):
-    print ('hello world python while loop ' + str(n))
+    print('hello world python while loop ' + str(n))
     n = n - 1
 
 
 # range in loops and nested for loop
-# i is where the iterater and range is how many time this loop needs to be executed 
+# i is where the iterater and range is how many time this loop needs to be executed
 
 for i in range(5):
     print('For loop : ' + str(i))
-    
+
     for i in range(5):
         print('Nested for loop ' + str(i))
+
+# reading input
+
+bools = True
+while bools:
+    value = input('Enter the interger >>')
+    try:
+        #value = int(value)
+        print(type(value))
+        print('is digit', value.isdigit())
+        if value.isdigit():
+            print('into the if condition')
+            bools = False
+            break
+        print('Try again until you get done')
+    except Exception as i:
+        print('invalid input entered :', i)
+print('while loops ends here with input has given correctly')

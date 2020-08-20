@@ -25,3 +25,10 @@ except:
     b = 10
 
 print('The value of b is : ', b, ' : ', a)
+
+no = 40 * 10.5
+
+c = 5 * (10.50 * 1.5)
+ans = no + c
+print(ans)
+
