@@ -109,3 +109,44 @@ while bools:
     except Exception as i:
         print('invalid input entered :', i)
 print('while loops ends here with input has given correctly')
+
+
+# continue statement
+
+
+while (True):
+    val = input('Enter the value : ')
+    break
+
+friends = ['chuck', 'norris', 'james', 'goshling']
+
+for iterate in friends:
+    print('Happy weekend ', iterate)
+
+# finding the largest number
+
+array = [1, 343, 53, 9, 0, 143, 1, 40]
+
+start = -1
+
+for i in array:
+    if i > start:
+        start = i
+print('Largest number in the array : ', start)
+
+
+start = array[0]
+# none is no vlue 
+# start = None
+print('noraml indexed value : ', start)
+for i in array:
+    if i < start:
+        start = i
+print('Smallest value in the array or given number is : ', start)
+
+array = [1, 4, 45, 43, 4034, 984, 0, 234, 8234]
+count = 0
+
+for i in array:
+    count = count + 1
+    print(' The values and index are : ', count, ' ', i)

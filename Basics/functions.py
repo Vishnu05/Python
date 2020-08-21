@@ -24,7 +24,11 @@ def computepay(h,r):
 
 
 h = float(input("Enter Hours:"))
-r = flaot(input('enter rate'))
+r = float(input('enter rate'))
           
 p = computepay(h, r)
 print("Pay",p)
+
+# @staticmethod
+# def funcname(parameter_list):
+#     pass
