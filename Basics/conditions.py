@@ -3,8 +3,8 @@
 
 # programm for voting 18+ can vote in india
 
-# age = input('Enter your age: ')
-# age = int(age)
+age = input('Enter your age: ')
+age = int(age)
 age = 1
 
 if age < 18:
