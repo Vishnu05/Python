@@ -63,7 +63,7 @@ print(friends[0])
 #     name[0] = 'V'
 # TypeError: 'str' object does not support item assignment
 name = 'vscode'
-name[0] = 'V'
+# name[0] = 'V'
 print('updating the string first char by index : ', name)
 
 # in and not in operator
@@ -86,3 +86,17 @@ val = 'hello split this string'
 val = val.split('s')
 
 print('Split s : ', val)
+
+# sorting the list and reversing the list works fine when we use like this 
+
+# inbulit sort and reverse
+food = ['burger', 'pizza', 'icecream', 'nugget', 'corn']
+print('Before sorting and reversing ', food)
+
+# sort
+food.sort()
+print('List has been sorted now ', food)
+
+# reverse
+food.reverse()
+print('List has been reveresed ', food)
