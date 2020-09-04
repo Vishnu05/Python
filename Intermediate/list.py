@@ -100,3 +100,29 @@ print('List has been sorted now ', food)
 # reverse
 food.reverse()
 print('List has been reveresed ', food)
+
+
+# to check whether the python list is empty or not 
+
+lisst = [1]
+
+# by if else 
+if lisst:
+    print('List is not Empty')
+else:
+    print('There is no value in the list')
+
+# by checking the length 
+def isListEmpty(lists):
+    if len(lisst) != 0:
+        return 'Value is there in list'
+    else:
+        return 'Whoops! nothing in here'
+
+print(isListEmpty(lisst))
+
+# list checking if the value is there are not 
+
+lisst = range(5)
+
+print(len(lisst))
