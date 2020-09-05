@@ -87,7 +87,7 @@ val = val.split('s')
 
 print('Split s : ', val)
 
-# sorting the list and reversing the list works fine when we use like this 
+# sorting the list and reversing the list works fine when we use like this
 
 # inbulit sort and reverse
 food = ['burger', 'pizza', 'icecream', 'nugget', 'corn']
@@ -102,27 +102,78 @@ food.reverse()
 print('List has been reveresed ', food)
 
 
-# to check whether the python list is empty or not 
+# to check whether the python list is empty or not
 
 lisst = [1]
 
-# by if else 
+# by if else
 if lisst:
     print('List is not Empty')
 else:
     print('There is no value in the list')
 
-# by checking the length 
+# by checking the length
+
+
 def isListEmpty(lists):
     if len(lisst) != 0:
         return 'Value is there in list'
     else:
         return 'Whoops! nothing in here'
 
+
 print(isListEmpty(lisst))
 
-# list checking if the value is there are not 
+# list checking if the value is there are not
 
-lisst = range(5)
+# newList = list(range(5))
+newList = list()
+
+# count = 0
+# for i in newList:
+#     newList[count] = ''
+#     count += 1
+# newList[0] = 1
+
+newList.insert(3, 'hello')
+newList.insert(5, 'yo')
+newList.insert(0, 1)
+
+print('printing the index value', newList.index('yo'))
+
+print(newList)
 
 print(len(lisst))
+
+
+# deleting the list element with user gives
+
+vowvels = ['a', 'e', 'i', 'o', 'i']
+
+vow = list()
+
+print('vowvels are : ', vowvels)
+
+for i in range(5):
+    val = input('enter the vowels ')
+    try:
+        index = vowvels.index(val)
+        if val == vowvels[index]:
+            print('index is : ', index)
+            vow.insert(index, vowvels[index])
+            print('Added index and value', index, 'and current value of vow is ', vow)
+    except:
+        print('The value you have entered doesnt belong to vowvels')
+
+    print('vowvels are : ', vowvels, 'and vowles answer are ', vow)
+    
+
+# enumerate sytax looks like tuples index, value pair
+
+# for index, value in enumerate(vowvels):
+#     # print('Enumerate ', value, )
+#     val = input('enter the vowels')
+#     if val == enumerate:
+#         print('no idea what it will happen')
+#     else:
+#         print('my if statement is wrong')
