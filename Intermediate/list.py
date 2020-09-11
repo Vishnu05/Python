@@ -154,18 +154,18 @@ vow = list()
 
 print('vowvels are : ', vowvels)
 
-for i in range(5):
-    val = input('enter the vowels ')
-    try:
-        index = vowvels.index(val)
-        if val == vowvels[index]:
-            print('index is : ', index)
-            vow.insert(index, vowvels[index])
-            print('Added index and value', index, 'and current value of vow is ', vow)
-    except:
-        print('The value you have entered doesnt belong to vowvels')
+# for i in range(5):
+#     val = input('enter the vowels ')
+#     try:
+#         index = vowvels.index(val)
+#         if val == vowvels[index]:
+#             print('index is : ', index)
+#             vow.insert(index, vowvels[index])
+#             print('Added index and value', index, 'and current value of vow is ', vow)
+#     except:
+#         print('The value you have entered doesnt belong to vowvels')
 
-    print('vowvels are : ', vowvels, 'and vowles answer are ', vow)
+#     print('vowvels are : ', vowvels, 'and vowles answer are ', vow)
     
 
 # enumerate sytax looks like tuples index, value pair
@@ -177,3 +177,52 @@ for i in range(5):
 #         print('no idea what it will happen')
 #     else:
 #         print('my if statement is wrong')
+
+
+# trying with stackoverflow, 
+
+lap = [None] * 5
+print('Setting the list length to 5 ', len(lap))
+lap[3] = 'vishnu'
+
+print('List is ', lap, vowvels)
+
+sets = set()
+
+for i in vowvels:
+    sets.add(i)
+
+print('value of set is ', sets)
+
+# for i in vowvels:
+#     val = input('enter the vowels : ')
+#     index = 0
+#     if val in vowvels:
+#         index = vowvels.index(val)
+#         lap[index] = vowvels[index]
+#         print('True')
+#     else:
+#         print('false')
+
+print('Lap values are ', lap)
+
+# with help of nested loops 
+
+vowV = vowvels
+
+for i in sets:
+    val = input('enter the values : ')
+    # index = 0
+    if val in vowvels:
+        for j in vowV:
+            index = 0
+            if val in j:
+                index = vowvels.index(val)
+                print('index is : ', index, ' and the vaule is : ', vowvels[index])
+                lap[index] = vowvels[index]
+                vowV[index] = ''
+                print('true')
+            else:
+                print('false ')
+               
+    print('Lap is ', lap)

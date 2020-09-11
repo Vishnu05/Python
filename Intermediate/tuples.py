@@ -20,7 +20,6 @@ print('tuples comparions ', (1, 5, 90) < (9, 2, 0))
 
 tup = tuple()
 
-
-
 tup = []
+
 

@@ -95,6 +95,7 @@ for i in range(5):
 # reading input
 
 bools = True
+bools = False
 while bools:
     value = input('Enter the interger >>')
     try:
@@ -150,3 +151,12 @@ count = 0
 for i in array:
     count = count + 1
     print(' The values and index are : ', count, ' ', i)
+
+
+# o(n)2 loops 
+
+
+for i in range(5):
+    for j in range(3):
+        print('adding values of i and j :', (i) + (j), 'value of i and j ', i , ' : ', j)
+    print('Iteration ', i, 'is over')

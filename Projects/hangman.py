@@ -49,20 +49,38 @@ for i in value:
 
 print('value in list ', valueList)
 
-count = 10
+count = 5
 answer = list()
 
-for i in range(10):
-    val = input('Enter your guess: ')
-    try:
-        index = valueList.index(val)
-        if val == valueList[index]:
-            answer.insert(index, valueList[index])
-    except:
-        print('You have entered a character that doesnt belong to the game')
-   
-    print("Your guess is : ", answer)
+# making all the values empty, when ever user gives the correct input values is updated
+for i in valueList:
+    answer.append('')
 
+print('Answer is : ', answer)
+
+# this is only for iteration purpose later, it needs to be refactored
+dummy = valueList
+
+
+for i in range(life):
+    val = input('Enter your guess : ')
+
+    # if condition to make sure the entered value is present in list
+    if val in valueList:
+        life = life + 1
+
+        for j in dummy:
+            index = 0
+            if val in j:
+                index = valueList.index(val)
+                answer[index] = valueList[index]
+                dummy[index] = ''
+        print('So far you have found : ', answer)
+
+    else:
+        print('You have entered a value that doesnt belong to hangman search')
+        
+    print('You have more ', life, 'chances ')
 
 
 # print(s)
