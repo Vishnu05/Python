@@ -210,19 +210,26 @@ print('Lap values are ', lap)
 
 vowV = vowvels
 
-for i in sets:
-    val = input('enter the values : ')
-    # index = 0
-    if val in vowvels:
-        for j in vowV:
-            index = 0
-            if val in j:
-                index = vowvels.index(val)
-                print('index is : ', index, ' and the vaule is : ', vowvels[index])
-                lap[index] = vowvels[index]
-                vowV[index] = ''
-                print('true')
-            else:
-                print('false ')
+# for i in sets:
+#     val = input('enter the values : ')
+#     # index = 0
+#     if val in vowvels:
+#         for j in vowV:
+#             index = 0
+#             if val in j:
+#                 index = vowvels.index(val)
+#                 print('index is : ', index, ' and the vaule is : ', vowvels[index])
+#                 lap[index] = vowvels[index]
+#                 vowV[index] = ''
+#                 print('true')
+#             else:
+#                 print('false ')
                
-    print('Lap is ', lap)
+#     print('Lap is ', lap)
+
+# list comparsion 
+
+if vowV == vowvels:
+    print('tow list are same')
+else:
+    print('both are different')

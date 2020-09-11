@@ -137,7 +137,7 @@ print('Largest number in the array : ', start)
 
 
 start = array[0]
-# none is no vlue 
+# none is no vlue
 # start = None
 print('noraml indexed value : ', start)
 for i in array:
@@ -153,10 +153,33 @@ for i in array:
     print(' The values and index are : ', count, ' ', i)
 
 
-# o(n)2 loops 
+# o(n)2 loops
 
 
 for i in range(5):
     for j in range(3):
-        print('adding values of i and j :', (i) + (j), 'value of i and j ', i , ' : ', j)
+        print('adding values of i and j :', (i) +
+              (j), 'value of i and j ', i, ' : ', j)
     print('Iteration ', i, 'is over')
+
+# counting the loops
+
+count = 5
+
+# for i in range(count):
+#     val = input('Enter the value for counting : ')
+#     if val == 'one':
+#         print('true')
+#         count = count + 1
+#     else:
+#         print('false')
+#     print('counting the loops ', i, count)
+
+while (count > 0): 
+    val = input('Enter the counts : ')
+    if val == 'one':
+        print('true')
+    else:
+        print('fales')
+        count -= 1
+    print('count values is :', count )

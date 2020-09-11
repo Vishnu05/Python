@@ -21,7 +21,7 @@ subCategory = [['batman', 'inception', 'rush',
                ['football', 'basketball', 'longjump', 'shotput', 'formula-1'],
                ['new-york', 'chennia', 'stockholm', 'amsterdam', 'london']]
 
-hints = [['The man who does good thing to people', 'Stealing the dream', 'James Hunt and Nikki lauda',
+hints = [['The man who does good thing to people, Billionare!!', 'Stealing the dream', 'James Hunt and Nikki lauda',
           'the guy runs entire US', 'Super hero who has hammer'],
          ['All around the world people love this game', 'In america one of the best games people watch',
              'It is all about the jump', 'Throwing heavy object for long distance', 'best race ever in world'],
@@ -41,7 +41,7 @@ value = s[subValue]
 
 print('Length of the word is ', len(value))
 
-life = 10
+life = 5
 
 valueList = list()
 for i in value:
@@ -49,7 +49,7 @@ for i in value:
 
 print('value in list ', valueList)
 
-count = 5
+# count = 5
 answer = list()
 
 # making all the values empty, when ever user gives the correct input values is updated
@@ -58,16 +58,23 @@ for i in valueList:
 
 print('Answer is : ', answer)
 
+select = list()
+
+for i in valueList:
+    select.append(i)
+
+print('select value is ', select)
+
 # this is only for iteration purpose later, it needs to be refactored
 dummy = valueList
 
-
-for i in range(life):
+# chaning from for loop to while loop is more control for me 
+while life > 0:
     val = input('Enter your guess : ')
 
     # if condition to make sure the entered value is present in list
     if val in valueList:
-        life = life + 1
+       # life = life + 1
 
         for j in dummy:
             index = 0
@@ -79,9 +86,16 @@ for i in range(life):
 
     else:
         print('You have entered a value that doesnt belong to hangman search')
-        
+        life -= 1
+    
+    print('the valueList and answer : ' , select == answer, 'original value is : ', select, ' guessed one : ', answer)
+    if answer == select:
+        print('Hoorahyy... You have gessed the word... Congrats', 'the word is', answer)
+        break
+
     print('You have more ', life, 'chances ')
 
+print ('value list and answer checking whether both are same or not', valueList == answer, 'original : ', valueList, 'answered : ', answer)
 
 # print(s)
 # print(h)
