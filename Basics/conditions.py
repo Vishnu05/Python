@@ -42,3 +42,13 @@ if 5 > 4:
     print('hello')
 if 7 > 3:
      print('')
+
+
+# if condition checks 
+
+val = 3
+
+for i in range(5):
+    if val < 5:
+        print(i)
+        val += 1

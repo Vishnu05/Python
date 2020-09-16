@@ -12,9 +12,9 @@ category = ['Movies', 'Sports', 'City']
 # using random selecting what kind of category want to play
 catValue = random.randrange(0, 3)
 
-print('catvalue is ', catValue)
+# print('catvalue is ', catValue)
 print('The choosen Category is :', category[catValue])
-print('You have roughly 10 chances to find out the Clue')
+print('You have roughly 5 chances to find out the Clue')
 
 subCategory = [['batman', 'inception', 'rush',
                 'forrest-gump', 'thor'],
@@ -39,7 +39,7 @@ print('Hint is !!!: ---> ', h[subValue])
 value = s[subValue]
 # print('Value of s ', value)
 
-print('Length of the word is ', len(value))
+print('Length of the Character is ', len(value))
 
 life = 5
 
@@ -47,7 +47,7 @@ valueList = list()
 for i in value:
     valueList.append(i)
 
-print('value in list ', valueList)
+# print('value in list ', valueList)
 
 # count = 5
 answer = list()
@@ -56,14 +56,14 @@ answer = list()
 for i in valueList:
     answer.append('')
 
-print('Answer is : ', answer)
+# print('Answer is : ', answer)
 
 select = list()
 
 for i in valueList:
     select.append(i)
 
-print('select value is ', select)
+# print('select value is ', select)
 
 # this is only for iteration purpose later, it needs to be refactored
 dummy = valueList
@@ -88,14 +88,14 @@ while life > 0:
         print('You have entered a value that doesnt belong to hangman search')
         life -= 1
     
-    print('the valueList and answer : ' , select == answer, 'original value is : ', select, ' guessed one : ', answer)
+    # print('the valueList and answer : ' , select == answer, 'original value is : ', select, ' guessed one : ', answer)
     if answer == select:
         print('Hoorahyy... You have gessed the word... Congrats', 'the word is', answer)
         break
 
     print('You have more ', life, 'chances ')
 
-print ('value list and answer checking whether both are same or not', valueList == answer, 'original : ', valueList, 'answered : ', answer)
+# print ('value list and answer checking whether both are same or not', valueList == answer, 'original : ', valueList, 'answered : ', answer)
 
 # print(s)
 # print(h)
