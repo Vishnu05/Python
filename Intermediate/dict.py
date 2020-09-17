@@ -63,3 +63,37 @@ for key, values in dic.items():
 
 
 print(dic.get('names', 3))
+
+# using input inserting values in dictionary 
+
+# val = dict()
+
+# print('Inserting values in dictionary using input ')
+
+# n = int(input('Enter the value range : '))
+
+# for i in range(n):
+#     li = list()
+#     val[input()] = li
+#     print('before the list')
+#     for i in range(3):
+#         li.append(input())
+#     print('after the list')
+    
+# print('dictionary values are ', val)
+
+    
+# reterive the values, using key 
+
+val = dict()
+
+val['one'] = [1 , 3]
+val['two'] = [3, 4]
+
+a = input('Enter the value to find out')
+
+v = val.get(a)
+
+print('value of dict ', val, 'getting the value using key' , v )
+
+

@@ -233,3 +233,17 @@ if vowV == vowvels:
     print('tow list are same')
 else:
     print('both are different')
+
+# list copying memory referece vs assign 
+
+cars = ['bmw', 'benz', 'toyoto']
+
+vechile = cars
+
+print('Values of two lists ', vechile, ' : ', cars)
+
+# while updating the list, it is not only updating in vechile list, it is also updating to parent one
+# it just refer to same memory location or pointer, to avoid this assign them is better 
+vechile[2] = 'tesla'
+
+print('updating the value for vechile list ', vechile , ' : ', cars)

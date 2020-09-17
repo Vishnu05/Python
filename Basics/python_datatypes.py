@@ -34,3 +34,29 @@ country = 'india'
 
 # type casting needs to be done when concatenation
 print('length of the country : ' + str(country.__len__()))
+
+
+# copying the variable vs assigning to them
+# this is working fine, but for the list it is different, values are assigned as same reference 
+
+lap = 'windows 10'
+hp = lap
+
+print('Value of string varible ', lap, hp)
+
+hp = 'windows 10 home edition'
+
+print('After changing the value ', lap, hp)
+
+# dict? 
+
+book = dict()
+
+
+book[2] = 'hi'
+print('dictionary ', book)
+
+val = book
+
+val[2] = 'value'
+print(val)

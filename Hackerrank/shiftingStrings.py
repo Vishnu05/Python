@@ -1,4 +1,6 @@
 
+
+# more optimized solution can be made 
 right_shifting = int(input())
 left_shifting = int(input())
 
@@ -41,6 +43,7 @@ for i in word:
         rshift[count] = lshift[right_shifting]
         count += 1
         right_shifting += 1
+
 
 print('Actual value :', word)
 print('Left shiting : ', lshift)
