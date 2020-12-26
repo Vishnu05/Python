@@ -2,6 +2,8 @@
 # basic hangman game,
 
 # word character less than 5 for now, each letter, each chances
+# List, in python if a list is copied it actually never copies the entire list value rather it copy the refereence
+# of the list. When ever the list changes the refferenced value of list of changes 
 
 import random
 
@@ -17,9 +19,9 @@ print('The choosen Category is :', category[catValue])
 print('You have roughly 5 chances to find out the Clue')
 
 subCategory = [['batman', 'inception', 'rush',
-                'forrest-gump', 'thor'],
-               ['football', 'basketball', 'longjump', 'shotput', 'formula-1'],
-               ['new-york', 'chennia', 'stockholm', 'amsterdam', 'london']]
+                'forrestgump', 'thor'],
+               ['football', 'basketball', 'longjump', 'shotput', 'formula1'],
+               ['new-york', 'chennai', 'stockholm', 'amsterdam', 'london']]
 
 hints = [['The man who does good thing to people, Billionare!!', 'Stealing the dream', 'James Hunt and Nikki lauda',
           'the guy runs entire US', 'Super hero who has hammer'],
@@ -36,6 +38,7 @@ subValue = random.randrange(0, 5)
 print('Hint is !!!: ---> ', h[subValue])
 # print('subvlalue is ', subValue)
 
+# Assigning the hangman word to variable value
 value = s[subValue]
 # print('Value of s ', value)
 
@@ -68,7 +71,9 @@ for i in valueList:
 # this is only for iteration purpose later, it needs to be refactored
 dummy = valueList
 
-# chaning from for loop to while loop is more control for me 
+finalAnswer = ''
+
+# chaning from for loop to while loop is more control for me
 while life > 0:
     val = input('Enter your guess : ')
 
@@ -87,14 +92,19 @@ while life > 0:
     else:
         print('You have entered a value that doesnt belong to hangman search')
         life -= 1
-    
+
     # print('the valueList and answer : ' , select == answer, 'original value is : ', select, ' guessed one : ', answer)
     if answer == select:
-        print('Hoorahyy... You have gessed the word... Congrats', 'the word is', answer)
+        print('Hoorahyy... You have gessed the word... Congrats',
+              'the word is', "==>", finalAnswer.join(answer))
         break
 
     print('You have more ', life, 'chances ')
 
+
+if (life <= 0):
+    print('The word is ', value)
+    print('All the chances have been exhausted, Start again ')
 # print ('value list and answer checking whether both are same or not', valueList == answer, 'original : ', valueList, 'answered : ', answer)
 
 # print(s)
